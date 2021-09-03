@@ -10,6 +10,9 @@
       "homepage": "https://github.com/leowebguy"
     }
   ],
+  "require": {
+    "craftcms/cms": "^3.4.0-RC1"
+  },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.18"
   },
