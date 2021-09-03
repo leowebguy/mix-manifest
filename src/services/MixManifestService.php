@@ -33,6 +33,7 @@ class MixManifestService extends Component
             return $jsonManifest[$file];
         }
 
-        throw new HttpException(500, "File '{$file}' not defined in '{$manifest}'");
+        // fallback to file without versioning
+        return $file . '?id=manifest-not-found';
     }
 }
