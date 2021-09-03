@@ -1,6 +1,6 @@
 <?php
 /**
- * A minimal Craft 3 plugin to load assets from `mix-manifest.json`
+ * A minimal Craft 3 plugin to load assets from mix-manifest.json
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy

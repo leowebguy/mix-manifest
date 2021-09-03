@@ -1,6 +1,6 @@
 <?php
 /**
- * A minimal Craft 3 plugin to load assets from `mix-manifest.json`
+ * A minimal Craft 3 plugin to load assets from mix-manifest.json
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
@@ -11,7 +11,6 @@
 namespace leowebguy\mixmanifest\twigextensions;
 
 use leowebguy\mixmanifest\MixManifest;
-use leowebguy\mixmanifest\services\MixManifestService;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;

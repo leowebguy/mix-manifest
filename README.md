@@ -19,12 +19,14 @@ Find versioned file from `/js/app.js`
 <link rel="stylesheet" href="{{ mix('/js/app.js') }}">
 ```
 
-output
+output 👇
 
 ```html
 <link rel="stylesheet" href="/js/app.js?id=1b26b5dcee58a5ecb27d">
 ```
 
+---
+
 You may also pass a different `mix-manifest.json` filename
 
-`{{ mix('/js/app.js', 'mix-manifest.json') }}`
+`{{ mix('/js/app.js', 'my-manifest.json') }}`
