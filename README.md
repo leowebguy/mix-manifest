@@ -1,7 +1,7 @@
-Mix Manifest plugin for Craft 3
+Mix Manifest plugin for Craft
 ===
 
-A minimal Craft 3 plugin to load assets from `mix-manifest.json`
+A minimal Craft plugin to load assets from `mix-manifest.json`
 
 ### Installation
 

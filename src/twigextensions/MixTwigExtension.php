@@ -1,6 +1,6 @@
 <?php
 /**
- * A minimal Craft 3 plugin to load assets from mix-manifest.json
+ * A minimal plugin to load assets from mix-manifest.json
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
@@ -10,11 +10,9 @@
 
 namespace leowebguy\mixmanifest\twigextensions;
 
-use leowebguy\mixmanifest\MixManifest;
-
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
-use yii\web\HttpException;
+use leowebguy\mixmanifest\MixManifest;
 
 /*
  * MixTwigExtension
@@ -24,7 +22,7 @@ class MixTwigExtension extends AbstractExtension
 {
     // Public Methods
     // =========================================================================
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('mix', [$this, 'mix'])
@@ -33,10 +31,6 @@ class MixTwigExtension extends AbstractExtension
 
     public function mix(string $file = null, string $manifest = 'mix-manifest.json')
     {
-        if (!isset($file) || empty($file)) {
-            throw new HttpException(500, "You must provide the file name e.g. '/js/app.js'");
-        }
-
         return MixManifest::$plugin->mixService->read($file, $manifest);
     }
 }

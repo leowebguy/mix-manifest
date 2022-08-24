@@ -1,6 +1,6 @@
 <?php
 /**
- * A minimal Craft 3 plugin to load assets from mix-manifest.json
+ * A minimal plugin to load assets from mix-manifest.json
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
@@ -10,21 +10,18 @@
 
 namespace leowebguy\mixmanifest;
 
-use leowebguy\mixmanifest\twigextensions\MixTwigExtension;
-
 use Craft;
 use craft\base\Plugin;
+use leowebguy\mixmanifest\twigextensions\MixTwigExtension;
 
 /*
  * Class MixManifest
  */
-
 class MixManifest extends Plugin
 {
     // Properties
     // =========================================================================
     public static $plugin;
-
 
     // Public Methods
     // =========================================================================
@@ -42,11 +39,7 @@ class MixManifest extends Plugin
 
         // log info
         Craft::info(
-            Craft::t(
-                'mix-manifest',
-                '{name} plugin loaded',
-                ['name' => $this->name]
-            ),
+            'Mix Manifest plugin loaded',
             __METHOD__
         );
     }
