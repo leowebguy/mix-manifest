@@ -35,7 +35,8 @@
   },
   "extra": {
     "name": "Mix Manifest",
-    "handle": "mix-manifest"
+    "handle": "mix-manifest",
+    "class": "leowebguy\\mixmanifest\\Mix"
   },
   "config": {
     "platform": {
