@@ -35,13 +35,7 @@
   },
   "extra": {
     "name": "Mix Manifest",
-    "handle": "mix-manifest",
-    "hasCpSection": false,
-    "hasCpSettings": false,
-    "components": {
-      "mixService": "leowebguy\\mixmanifest\\services\\MixManifestService"
-    },
-    "class": "leowebguy\\mixmanifest\\MixManifest"
+    "handle": "mix-manifest"
   },
   "config": {
     "platform": {

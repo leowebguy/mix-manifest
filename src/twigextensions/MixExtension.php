@@ -12,9 +12,9 @@ namespace leowebguy\mixmanifest\twigextensions;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
-use leowebguy\mixmanifest\MixManifest;
+use leowebguy\mixmanifest\Mix;
 
-class MixTwigExtension extends AbstractExtension
+class MixExtension extends AbstractExtension
 {
     // Public Methods
     // =========================================================================
@@ -28,6 +28,6 @@ class MixTwigExtension extends AbstractExtension
 
     public function mix(string $file = null, string $manifest = 'mix-manifest.json')
     {
-        return MixManifest::$plugin->mixService->read($file, $manifest);
+        return Mix::$plugin->mixService->read($file, $manifest);
     }
 }

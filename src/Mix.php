@@ -12,14 +12,19 @@ namespace leowebguy\mixmanifest;
 
 use Craft;
 use craft\base\Plugin;
-use leowebguy\mixmanifest\twigextensions\MixTwigExtension;
+use leowebguy\mixmanifest\services\MixService;
+use leowebguy\mixmanifest\twigextensions\MixExtension;
 
-class MixManifest extends Plugin
+class Mix extends Plugin
 {
     // Properties
     // =========================================================================
 
     public static $plugin;
+
+    public bool $hasCpSection = false;
+
+    public bool $hasCpSettings = false;
 
     // Public Methods
     // =========================================================================
@@ -33,8 +38,12 @@ class MixManifest extends Plugin
             return;
         }
 
+        $this->setComponents([
+            'mixService' => MixService::class
+        ]);
+
         // Register extension
-        Craft::$app->view->registerTwigExtension(new MixTwigExtension());
+        Craft::$app->view->registerTwigExtension(new MixExtension());
 
         Craft::info(
             'Mix Manifest plugin loaded',

@@ -14,7 +14,7 @@ use Craft;
 use craft\base\Component;
 use craft\helpers\Json;
 
-class MixManifestService extends Component
+class MixService extends Component
 {
     // Public Methods
     // =========================================================================
