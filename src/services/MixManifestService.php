@@ -10,31 +10,30 @@
 
 namespace leowebguy\mixmanifest\services;
 
-Use Craft;
+use Craft;
 use craft\base\Component;
+use craft\helpers\Json;
 
-/*
- * MixManifestService
- */
 class MixManifestService extends Component
 {
     // Public Methods
     // =========================================================================
+
     public function read($file, $manifest)
     {
         if (@file_exists($manifest)) {
-            $jsonManifest = @json_decode(
-                @file_get_contents($manifest), true, 512, JSON_THROW_ON_ERROR
+            $j = Json::decodeIfJson(
+                @file_get_contents($manifest)
             );
         }
 
-        if (isset($jsonManifest[$file])) {
-            return $jsonManifest[$file];
+        if (isset($j[$file])) {
+            return $j[$file];
         }
 
         Craft::error('Mix Manifest file is empty', __METHOD__);
 
-        // fallback to file without versioning
+        // Fallback to file without versioning
         return $file . '?id=manifest-not-found';
     }
 }

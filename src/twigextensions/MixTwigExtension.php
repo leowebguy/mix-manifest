@@ -14,14 +14,11 @@ use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 use leowebguy\mixmanifest\MixManifest;
 
-/*
- * MixTwigExtension
- */
-
 class MixTwigExtension extends AbstractExtension
 {
     // Public Methods
     // =========================================================================
+
     public function getFunctions(): array
     {
         return [

@@ -14,17 +14,16 @@ use Craft;
 use craft\base\Plugin;
 use leowebguy\mixmanifest\twigextensions\MixTwigExtension;
 
-/*
- * Class MixManifest
- */
 class MixManifest extends Plugin
 {
     // Properties
     // =========================================================================
+
     public static $plugin;
 
     // Public Methods
     // =========================================================================
+
     public function init()
     {
         parent::init();
@@ -34,10 +33,9 @@ class MixManifest extends Plugin
             return;
         }
 
-        // register extension
+        // Register extension
         Craft::$app->view->registerTwigExtension(new MixTwigExtension());
 
-        // log info
         Craft::info(
             'Mix Manifest plugin loaded',
             __METHOD__

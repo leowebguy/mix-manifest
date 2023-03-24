@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.3 - 2023.03.23
+### Clenup, PHP 8.2
+
 ## 1.0.2 - 2022.08.24
 ### Best Practices / Cleanup
 
