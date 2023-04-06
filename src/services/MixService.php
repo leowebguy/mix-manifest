@@ -4,7 +4,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2021, leowebguy
+ * @copyright  Copyright (c) 2023, leowebguy
  * @license    MIT
  */
 
@@ -19,7 +19,12 @@ class MixService extends Component
     // Public Methods
     // =========================================================================
 
-    public function read($file, $manifest)
+    /**
+     * @param $file
+     * @param $manifest
+     * @return mixed|string
+     */
+    public function read($file, $manifest): mixed
     {
         if (@file_exists($manifest)) {
             $j = Json::decodeIfJson(

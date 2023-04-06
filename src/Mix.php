@@ -4,7 +4,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2021, leowebguy
+ * @copyright  Copyright (c) 2023, leowebguy
  * @license    MIT
  */
 
@@ -20,7 +20,7 @@ class Mix extends Plugin
     // Properties
     // =========================================================================
 
-    public static $plugin;
+    public static mixed $plugin;
 
     public bool $hasCpSection = false;
 
@@ -29,7 +29,10 @@ class Mix extends Plugin
     // Public Methods
     // =========================================================================
 
-    public function init()
+    /**
+     * @return void
+     */
+    public function init(): void
     {
         parent::init();
         self::$plugin = $this;
