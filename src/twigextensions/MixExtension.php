@@ -4,21 +4,17 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2023, leowebguy
- * @license    MIT
+ * @copyright  Copyright (c) 2024, leowebguy
  */
 
 namespace leowebguy\mixmanifest\twigextensions;
 
+use leowebguy\mixmanifest\Mix;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
-use leowebguy\mixmanifest\Mix;
 
 class MixExtension extends AbstractExtension
 {
-    // Public Methods
-    // =========================================================================
-
     /**
      * @return TwigFunction[]
      */
@@ -36,6 +32,6 @@ class MixExtension extends AbstractExtension
      */
     public function mix(string $file = null, string $manifest = 'mix-manifest.json'): mixed
     {
-        return Mix::$plugin->mixService->read($file, $manifest);
+        return Mix::getInstance()->mixService->read($file, $manifest);
     }
 }

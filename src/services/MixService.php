@@ -4,8 +4,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2023, leowebguy
- * @license    MIT
+ * @copyright  Copyright (c) 2024, leowebguy
  */
 
 namespace leowebguy\mixmanifest\services;
@@ -16,9 +15,6 @@ use craft\helpers\Json;
 
 class MixService extends Component
 {
-    // Public Methods
-    // =========================================================================
-
     /**
      * @param $file
      * @param $manifest

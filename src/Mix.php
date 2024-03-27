@@ -4,8 +4,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2023, leowebguy
- * @license    MIT
+ * @copyright  Copyright (c) 2024, leowebguy
  */
 
 namespace leowebguy\mixmanifest;
@@ -17,25 +16,13 @@ use leowebguy\mixmanifest\twigextensions\MixExtension;
 
 class Mix extends Plugin
 {
-    // Properties
-    // =========================================================================
-
-    public static mixed $plugin;
-
     public bool $hasCpSection = false;
 
     public bool $hasCpSettings = false;
 
-    // Public Methods
-    // =========================================================================
-
-    /**
-     * @return void
-     */
     public function init(): void
     {
         parent::init();
-        self::$plugin = $this;
 
         if (!$this->isInstalled) {
             return;
@@ -45,8 +32,7 @@ class Mix extends Plugin
             'mixService' => MixService::class
         ]);
 
-        // Register extension
-        Craft::$app->view->registerTwigExtension(new MixExtension());
+        Craft::$app->view->registerTwigExtension(new MixExtension);
 
         Craft::info(
             'Mix Manifest plugin loaded',
